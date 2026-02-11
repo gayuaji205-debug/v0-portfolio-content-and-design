@@ -1,5 +1,8 @@
-import { GraduationCap, MapPin, Calendar } from "lucide-react"
+"use client"
+
+import { GraduationCap, MapPin, Calendar, BookOpen } from "lucide-react"
 import { SectionHeading } from "./section-heading"
+import { useScrollReveal } from "@/hooks/use-scroll-reveal"
 
 const educationData = [
   {
@@ -7,55 +10,87 @@ const educationData = [
     institution: "Government College of Engineering, Bodinayakanur",
     location: "Bodinayakanur, Tamil Nadu",
     period: "2023 - 2027 (Expected)",
+    isCurrent: true,
     description:
-      "Currently pursuing a bachelor's degree in Computer Science and Engineering with a strong focus on programming fundamentals, data structures, algorithms, database management, and software engineering principles.",
+      "Pursuing a comprehensive bachelor's degree with a strong focus on programming, data structures, algorithms, database management, and software engineering. Building a solid foundation through both theoretical coursework and practical project work.",
     highlights: [
-      "Core subjects: DSA, DBMS, OS, OOP, Computer Networks",
-      "Hands-on project work in Python, Java, SQL, and Power BI",
-      "Active participation in coding events and technical workshops",
+      "Core Subjects: DSA, DBMS, OS, OOP, Computer Networks, Software Engineering",
+      "Hands-on project experience in Python, Java, SQL, C, and Power BI",
+      "Active participant in coding events, hackathons, and technical workshops",
+      "Building real-world applications through academic and self-initiated projects",
     ],
   },
   {
-    degree: "Higher Secondary Education (XII)",
+    degree: "Higher Secondary Education (Class XII)",
     institution: "Higher Secondary School",
     location: "Tamil Nadu",
     period: "2021 - 2023",
+    isCurrent: false,
     description:
-      "Completed higher secondary education with a focus on Mathematics, Physics, and Computer Science, laying a strong academic foundation for engineering studies.",
+      "Completed higher secondary education with a specialization in Mathematics, Physics, and Computer Science, establishing a strong analytical foundation for engineering studies.",
     highlights: [
-      "Studied core science and mathematics",
-      "Developed early interest in computers and programming",
+      "Focused on Mathematics, Physics, and Computer Science",
+      "Developed early passion for programming and logical thinking",
+      "Built a strong academic foundation for engineering pursuits",
     ],
   },
 ]
 
 export function EducationSection() {
+  const { ref, isVisible } = useScrollReveal()
+
   return (
-    <section id="education" className="px-6 py-20 md:py-28">
+    <section id="education" className="px-6 py-24 md:py-32">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           icon={GraduationCap}
           label="Education"
           title="Academic Background"
-          description="My educational journey that has built the foundation for my career in Computer Science."
+          description="The educational journey that shapes my technical expertise and professional growth."
         />
 
-        <div className="mx-auto max-w-3xl">
+        <div ref={ref} className="mx-auto max-w-3xl">
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-6 top-0 bottom-0 w-px bg-border md:left-8" />
+            <div className="absolute left-7 top-0 bottom-0 w-px bg-border md:left-9" />
 
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-10">
               {educationData.map((edu, index) => (
-                <div key={edu.degree} className="relative pl-14 md:pl-20">
+                <div
+                  key={edu.degree}
+                  className={`relative pl-16 md:pl-24 reveal-up ${isVisible ? "revealed" : ""} stagger-${index + 1}`}
+                >
                   {/* Timeline dot */}
-                  <div className="absolute left-4 top-1 flex h-5 w-5 items-center justify-center rounded-full border-2 border-secondary bg-card md:left-6">
-                    <div className="h-2 w-2 rounded-full bg-secondary" />
+                  <div className="absolute left-4 top-2 md:left-6">
+                    <div
+                      className={`flex h-7 w-7 items-center justify-center rounded-full border-2 ${
+                        edu.isCurrent
+                          ? "border-secondary bg-secondary/10"
+                          : "border-border bg-card"
+                      }`}
+                    >
+                      <div
+                        className={`h-2.5 w-2.5 rounded-full ${
+                          edu.isCurrent ? "bg-secondary animate-pulse" : "bg-muted-foreground/30"
+                        }`}
+                      />
+                    </div>
                   </div>
 
-                  <div className="rounded-xl border border-border bg-card p-6 shadow-sm transition-all hover:shadow-md">
-                    <div className="mb-3 flex flex-wrap items-center gap-3">
-                      <span className="inline-flex items-center gap-1.5 rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">
+                  <div className="group rounded-2xl border border-border bg-card p-7 shadow-sm transition-all duration-300 hover:shadow-md hover:border-secondary/20">
+                    {/* Current badge */}
+                    {edu.isCurrent && (
+                      <span className="mb-4 inline-flex items-center gap-1.5 rounded-full bg-secondary/10 px-3 py-1 text-xs font-semibold text-secondary">
+                        <span className="relative flex h-1.5 w-1.5">
+                          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-secondary opacity-75" />
+                          <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-secondary" />
+                        </span>
+                        Currently Pursuing
+                      </span>
+                    )}
+
+                    <div className="mb-4 flex flex-wrap items-center gap-3">
+                      <span className="inline-flex items-center gap-1.5 rounded-lg bg-primary/5 px-3 py-1.5 text-xs font-medium text-primary">
                         <Calendar size={12} />
                         {edu.period}
                       </span>
@@ -64,22 +99,24 @@ export function EducationSection() {
                         {edu.location}
                       </span>
                     </div>
-                    <h3 className="mb-1 font-heading text-lg font-semibold text-primary">
+
+                    <h3 className="mb-1.5 font-heading text-lg font-bold text-primary">
                       {edu.degree}
                     </h3>
-                    <p className="mb-3 text-sm font-medium text-secondary">
+                    <p className="mb-4 flex items-center gap-2 text-sm font-semibold text-secondary">
+                      <BookOpen size={14} />
                       {edu.institution}
                     </p>
-                    <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
+                    <p className="mb-5 text-sm leading-relaxed text-muted-foreground">
                       {edu.description}
                     </p>
-                    <ul className="flex flex-col gap-2">
+                    <ul className="flex flex-col gap-2.5">
                       {edu.highlights.map((item) => (
                         <li
                           key={item}
-                          className="flex items-start gap-2 text-sm text-foreground"
+                          className="flex items-start gap-2.5 text-sm text-foreground/80"
                         >
-                          <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-secondary" />
+                          <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-secondary" />
                           {item}
                         </li>
                       ))}
