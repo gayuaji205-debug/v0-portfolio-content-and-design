@@ -1,51 +1,30 @@
 "use client"
 
-import { Trophy, Award, BookOpen, Users, Star, Medal } from "lucide-react"
+import { Trophy, Award, BookOpen, Star } from "lucide-react"
 import { SectionHeading } from "./section-heading"
 import { useScrollReveal } from "@/hooks/use-scroll-reveal"
 
 const achievements = [
   {
     icon: Award,
-    title: "Academic Excellence",
+    title: "Academic Mini-Projects",
     description:
-      "Consistently maintained strong academic performance throughout the undergraduate program, achieving distinction in core Computer Science subjects including DSA, DBMS, and OOP.",
+      "Completed multiple academic mini-projects in programming and data analysis, building practical experience across Python, SQL, Java, C, and Power BI.",
     accent: "border-secondary/20 hover:border-secondary/40",
   },
   {
     icon: BookOpen,
-    title: "Technical Workshop Participant",
+    title: "Continuous Learning",
     description:
-      "Actively participated in workshops covering Python programming, data analytics, and web development, organized by the college and external technical communities.",
+      "Actively learning advanced concepts in software development, staying current with industry trends and expanding technical knowledge beyond the classroom.",
     accent: "border-primary/20 hover:border-primary/40",
-  },
-  {
-    icon: Users,
-    title: "Team Collaboration",
-    description:
-      "Successfully collaborated on multiple group projects demonstrating strong teamwork, communication, and project coordination skills in academic settings.",
-    accent: "border-secondary/20 hover:border-secondary/40",
   },
   {
     icon: Star,
-    title: "Coding Event Participant",
+    title: "Technical Seminars & Workshops",
     description:
-      "Participated in intra-college coding competitions and hackathons, honing problem-solving skills under time constraints and competitive pressure.",
-    accent: "border-primary/20 hover:border-primary/40",
-  },
-  {
-    icon: Medal,
-    title: "Self-Directed Learning",
-    description:
-      "Proactively completed online courses and certifications in Python, SQL, and Power BI to complement academic learning with industry-relevant skills.",
+      "Participated in technical seminars and workshops organized by the college and external technical communities, gaining exposure to real-world practices.",
     accent: "border-secondary/20 hover:border-secondary/40",
-  },
-  {
-    icon: Trophy,
-    title: "Project Showcase",
-    description:
-      "Presented academic projects in department seminars, receiving commendation from faculty for technical depth, code quality, and presentation clarity.",
-    accent: "border-primary/20 hover:border-primary/40",
   },
 ]
 

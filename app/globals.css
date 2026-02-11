@@ -10,28 +10,28 @@
 
 @layer base {
   :root {
-    /* Navy Blue + Teal Portfolio Theme */
-    --background: 216 28% 97%;
-    --foreground: 222 47% 11%;
+    /* Navy Blue (#0A192F) + Teal (#64FFDA) Portfolio Theme */
+    --background: 216 30% 97%;
+    --foreground: 215 63% 11%;
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 215 63% 11%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
-    --primary: 220 44% 14%;
+    --popover-foreground: 215 63% 11%;
+    --primary: 215 63% 11%;
     --primary-foreground: 210 40% 98%;
-    --secondary: 172 56% 42%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 166 100% 70%;
+    --secondary-foreground: 215 63% 11%;
     --muted: 216 22% 93%;
     --muted-foreground: 220 15% 46%;
-    --accent: 172 56% 42%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 166 100% 70%;
+    --accent-foreground: 215 63% 11%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 220 18% 89%;
     --input: 220 18% 89%;
-    --ring: 172 56% 42%;
-    --chart-1: 172 56% 42%;
-    --chart-2: 220 44% 14%;
+    --ring: 166 100% 70%;
+    --chart-1: 166 100% 70%;
+    --chart-2: 215 63% 11%;
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;

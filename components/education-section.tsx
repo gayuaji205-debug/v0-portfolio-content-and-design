@@ -6,32 +6,17 @@ import { useScrollReveal } from "@/hooks/use-scroll-reveal"
 
 const educationData = [
   {
-    degree: "B.E. Computer Science and Engineering",
+    degree: "Bachelor of Engineering in Computer Science",
     institution: "Government College of Engineering, Bodinayakanur",
     location: "Bodinayakanur, Tamil Nadu",
-    period: "2023 - 2027 (Expected)",
+    period: "3rd Year (Expected Graduation: 20XX)",
     isCurrent: true,
     description:
-      "Pursuing a comprehensive bachelor's degree with a strong focus on programming, data structures, algorithms, database management, and software engineering. Building a solid foundation through both theoretical coursework and practical project work.",
+      "Pursuing a comprehensive engineering degree with a strong focus on programming, data structures, algorithms, database management, and software engineering principles.",
     highlights: [
-      "Core Subjects: DSA, DBMS, OS, OOP, Computer Networks, Software Engineering",
       "Hands-on project experience in Python, Java, SQL, C, and Power BI",
-      "Active participant in coding events, hackathons, and technical workshops",
-      "Building real-world applications through academic and self-initiated projects",
-    ],
-  },
-  {
-    degree: "Higher Secondary Education (Class XII)",
-    institution: "Higher Secondary School",
-    location: "Tamil Nadu",
-    period: "2021 - 2023",
-    isCurrent: false,
-    description:
-      "Completed higher secondary education with a specialization in Mathematics, Physics, and Computer Science, establishing a strong analytical foundation for engineering studies.",
-    highlights: [
-      "Focused on Mathematics, Physics, and Computer Science",
-      "Developed early passion for programming and logical thinking",
-      "Built a strong academic foundation for engineering pursuits",
+      "Core focus on Data Structures, DBMS, OOP, and Problem Solving",
+      "Actively building real-world applications through academic projects",
     ],
   },
 ]

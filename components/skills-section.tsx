@@ -5,8 +5,7 @@ import {
   Database,
   Code,
   BarChart3,
-  Terminal,
-  Globe,
+  Cpu,
 } from "lucide-react"
 import { SectionHeading } from "./section-heading"
 import { useScrollReveal } from "@/hooks/use-scroll-reveal"
@@ -20,62 +19,33 @@ const skillCategories = [
       { name: "Python", level: 85 },
       { name: "Java", level: 75 },
       { name: "C", level: 70 },
-      { name: "SQL", level: 80 },
     ],
   },
   {
     icon: Database,
-    title: "Database & Data",
+    title: "Database",
     accent: "from-primary to-primary/70",
     skills: [
-      { name: "MySQL", level: 80 },
-      { name: "PostgreSQL", level: 65 },
-      { name: "Data Analysis", level: 70 },
-      { name: "Data Modeling", level: 65 },
+      { name: "SQL", level: 80 },
     ],
   },
   {
     icon: BarChart3,
-    title: "Visualization & Tools",
+    title: "Data & Visualization",
     accent: "from-secondary to-secondary/70",
     skills: [
       { name: "Power BI", level: 75 },
-      { name: "MS Excel", level: 80 },
-      { name: "Data Reporting", level: 70 },
-      { name: "Dashboards", level: 70 },
     ],
   },
   {
-    icon: Terminal,
-    title: "Development Tools",
+    icon: Cpu,
+    title: "Core Concepts",
     accent: "from-primary to-primary/70",
     skills: [
-      { name: "Git & GitHub", level: 70 },
-      { name: "VS Code", level: 85 },
-      { name: "Jupyter Notebook", level: 75 },
-      { name: "Eclipse IDE", level: 65 },
-    ],
-  },
-  {
-    icon: Globe,
-    title: "Web Fundamentals",
-    accent: "from-secondary to-secondary/70",
-    skills: [
-      { name: "HTML", level: 75 },
-      { name: "CSS", level: 70 },
-      { name: "JavaScript", level: 60 },
-      { name: "Flask (Basics)", level: 55 },
-    ],
-  },
-  {
-    icon: Wrench,
-    title: "Core Competencies",
-    accent: "from-primary to-primary/70",
-    skills: [
-      { name: "DSA", level: 70 },
-      { name: "OOP", level: 80 },
+      { name: "Data Structures (Basics)", level: 70 },
+      { name: "Object-Oriented Programming", level: 80 },
       { name: "DBMS", level: 78 },
-      { name: "OS Fundamentals", level: 65 },
+      { name: "Problem Solving", level: 75 },
     ],
   },
 ]
@@ -84,9 +54,9 @@ export function SkillsSection() {
   const { ref, isVisible } = useScrollReveal()
 
   return (
-    <section id="skills" className="bg-primary px-6 py-24 md:py-32">
-      {/* Decorative elements */}
-      <div className="pointer-events-none absolute left-0 right-0 opacity-[0.03]">
+    <section id="skills" className="relative bg-primary px-6 py-24 md:py-32">
+      {/* Decorative dot pattern */}
+      <div className="pointer-events-none absolute inset-0 opacity-[0.03]">
         <div
           className="h-full w-full"
           style={{
@@ -118,7 +88,7 @@ export function SkillsSection() {
           </div>
         </div>
 
-        <div ref={ref} className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div ref={ref} className="grid gap-5 sm:grid-cols-2">
           {skillCategories.map((category, index) => (
             <div
               key={category.title}
