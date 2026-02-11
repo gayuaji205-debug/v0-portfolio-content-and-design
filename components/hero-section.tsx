@@ -7,7 +7,7 @@ const roles = [
   "Aspiring Software Developer",
   "Data Enthusiast",
   "Problem Solver",
-  "Continuous Learner",
+  "Creative Thinker",
 ]
 
 export function HeroSection() {
@@ -115,9 +115,9 @@ export function HeroSection() {
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          Computer Science Engineering Student at Government College of
-          Engineering, Bodinayakanur. Passionate about technology,
-          problem-solving, and building efficient solutions with code and data.
+          Third-year Computer Science Engineering student at GCE Bodinayakanur,
+          passionate about crafting elegant solutions through code, data
+          analysis, and creative problem-solving.
         </p>
 
         <div
@@ -127,9 +127,9 @@ export function HeroSection() {
         >
           <a
             href="#projects"
-            className="group inline-flex items-center gap-2.5 rounded-xl bg-secondary px-7 py-3.5 font-heading text-sm font-semibold text-primary shadow-lg shadow-secondary/25 transition-all duration-300 hover:bg-secondary/90 hover:shadow-xl hover:shadow-secondary/30 hover:-translate-y-0.5"
+            className="group inline-flex items-center gap-2.5 rounded-xl bg-secondary px-7 py-3.5 font-heading text-sm font-semibold text-accent-foreground shadow-lg shadow-secondary/25 transition-all duration-300 hover:bg-secondary/90 hover:shadow-xl hover:shadow-secondary/30 hover:-translate-y-0.5"
           >
-            View Projects
+            Explore My Projects
             <ArrowDown size={16} className="transition-transform group-hover:translate-y-0.5" />
           </a>
           <a
@@ -147,9 +147,9 @@ export function HeroSection() {
           }`}
         >
           {[
-            { icon: Github, href: "https://github.com/yourusername", label: "GitHub" },
-            { icon: Linkedin, href: "https://linkedin.com/in/yourprofile", label: "LinkedIn" },
-            { icon: Mail, href: "mailto:your-email@example.com", label: "Email" },
+            { icon: Github, href: "https://github.com/", label: "GitHub" },
+            { icon: Linkedin, href: "https://linkedin.com/", label: "LinkedIn" },
+            { icon: Mail, href: "mailto:gayathridevi@example.com", label: "Email" },
           ].map((social) => (
             <a
               key={social.label}

@@ -81,7 +81,7 @@ export function AboutSection() {
 
               <div className="flex flex-col gap-5 text-base leading-relaxed text-foreground/80">
                 <p>
-                  I am a motivated and detail-oriented{" "}
+                  I am a dedicated and growth-oriented{" "}
                   <span className="font-semibold text-primary">
                     third-year Computer Science Engineering student
                   </span>{" "}
@@ -89,29 +89,26 @@ export function AboutSection() {
                   <span className="font-semibold text-primary">
                     Government College of Engineering, Bodinayakanur
                   </span>
-                  . I am passionate about technology, problem-solving, and
-                  continuous learning.
+                  . My journey in technology began with a simple curiosity about how
+                  software works, and has since evolved into a deep passion for building
+                  solutions that make a difference.
                 </p>
                 <p>
-                  I have hands-on experience in programming, database management,
-                  and data visualization through academic and personal projects. I
-                  enjoy building efficient solutions using{" "}
+                  Through hands-on projects spanning{" "}
                   <span className="font-medium text-secondary">
-                    Python, Java, C, SQL, and Power BI
+                    Python, SQL, Java, C, and Power BI
                   </span>
-                  .
+                  , I have cultivated a versatile skill set that bridges the worlds of
+                  software development and data analytics. I believe in the power of clean
+                  code, thoughtful design, and data-driven insights to solve real-world
+                  challenges.
                 </p>
                 <p>
-                  My goal is to begin my career as a{" "}
-                  <span className="font-semibold text-primary">
-                    software developer
-                  </span>{" "}
-                  or{" "}
-                  <span className="font-semibold text-primary">
-                    data analyst
-                  </span>{" "}
-                  where I can apply my technical skills, grow professionally, and
-                  contribute meaningfully to innovative projects.
+                  What drives me is the belief that technology, when applied with intention
+                  and creativity, can transform the way we live and work. I am actively
+                  seeking opportunities to contribute to meaningful projects, collaborate
+                  with industry professionals, and continue evolving as a well-rounded
+                  engineer who delivers impact from day one.
                 </p>
               </div>
 

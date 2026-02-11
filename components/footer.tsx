@@ -6,14 +6,13 @@ const footerLinks = [
   { href: "#projects", label: "Projects" },
   { href: "#education", label: "Education" },
   { href: "#achievements", label: "Achievements" },
-  { href: "#career", label: "Objective" },
   { href: "#contact", label: "Contact" },
 ]
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com/yourusername", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com/in/yourprofile", label: "LinkedIn" },
-  { icon: Mail, href: "mailto:your-email@example.com", label: "Email" },
+  { icon: Github, href: "https://github.com/", label: "GitHub" },
+  { icon: Linkedin, href: "https://linkedin.com/", label: "LinkedIn" },
+  { icon: Mail, href: "mailto:gayathridevi@example.com", label: "Email" },
 ]
 
 export function Footer() {

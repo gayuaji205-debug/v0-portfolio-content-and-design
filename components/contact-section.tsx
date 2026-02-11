@@ -17,8 +17,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "your-email@example.com",
-    href: "mailto:your-email@example.com",
+    value: "gayathridevi@example.com",
+    href: "mailto:gayathridevi@example.com",
   },
   {
     icon: MapPin,
@@ -29,7 +29,7 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+91-XXXXXXXXXX",
+    value: "+91 XXXXX XXXXX",
     href: "tel:+91XXXXXXXXXX",
   },
 ]
@@ -38,15 +38,15 @@ const socialLinks = [
   {
     icon: Github,
     label: "GitHub",
-    href: "https://github.com/yourusername",
-    username: "github.com/yourusername",
-    description: "Check out my code and project repositories",
+    href: "https://github.com/",
+    username: "@gayathridevi",
+    description: "Check out my code and open-source contributions",
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    href: "https://linkedin.com/in/yourprofile",
-    username: "linkedin.com/in/yourprofile",
+    href: "https://linkedin.com/",
+    username: "Gayathridevi E",
     description: "Connect with me professionally",
   },
 ]
@@ -161,7 +161,7 @@ export function ContactSection() {
                   </h3>
                   <p className="mb-8 text-sm leading-relaxed text-primary-foreground/60">
                     {
-                      "I am open to internships, entry-level roles, and collaborative projects. Feel free to connect with me via email or LinkedIn."
+                      "I'm a motivated Computer Science student ready to contribute to meaningful projects and grow alongside experienced professionals."
                     }
                   </p>
 
@@ -185,8 +185,8 @@ export function ContactSection() {
                 </div>
 
                 <a
-                  href="mailto:your-email@example.com"
-                  className="relative mt-10 inline-flex items-center justify-center gap-2.5 rounded-xl bg-secondary px-7 py-4 font-heading text-sm font-semibold text-primary shadow-lg shadow-secondary/25 transition-all duration-300 hover:bg-secondary/90 hover:shadow-xl hover:shadow-secondary/30 hover:-translate-y-0.5"
+                  href="mailto:gayathridevi@example.com"
+                  className="relative mt-10 inline-flex items-center justify-center gap-2.5 rounded-xl bg-secondary px-7 py-4 font-heading text-sm font-semibold text-accent-foreground shadow-lg shadow-secondary/25 transition-all duration-300 hover:bg-secondary/90 hover:shadow-xl hover:shadow-secondary/30 hover:-translate-y-0.5"
                 >
                   <Mail size={16} />
                   Send Me an Email
